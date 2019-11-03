@@ -1,1 +1,1 @@
-console.log("Exercise 3: SlotMachine");
+console.log("Exercise 5: SlotMachine");

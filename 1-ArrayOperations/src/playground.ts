@@ -1,3 +1,5 @@
+console.log("Exercise 1: Array operations");
+
 const deportes = ["Baloncesto", "Tenis", "Fútbol", "Padel"];
 
 const head = ([head] : Array<string>) => head;

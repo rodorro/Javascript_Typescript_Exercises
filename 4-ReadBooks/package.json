@@ -1,12 +1,28 @@
 {
-  "name": "4-ReadBooks",
+  "name": "3-ReadBooks",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Playground to show fourth exercise",
+  "keywords": [
+    "javascript",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "Iban Llano",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run copy && run-p transpile devserver",
+    "copy": "copyfiles --flat src/**/*.{html,css} transpiled",
+    "transpile": "tsc --outDir transpiled",
+    "devserver": "lite-server -c bs-config.json",
+    "tsc": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "copyfiles": "^2.1.1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.6.4"
+  }
 }

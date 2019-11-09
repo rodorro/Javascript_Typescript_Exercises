@@ -18,7 +18,6 @@ const books = [
 ]
 
 const isBookRead = (books:Array<Book>, titleToSearch:string) : boolean => {
-
     return books.find(book => book.title === titleToSearch).isRead;
 }
 

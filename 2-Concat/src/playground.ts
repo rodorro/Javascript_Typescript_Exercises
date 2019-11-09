@@ -1,7 +1,9 @@
 console.log("Exercise 2: Concat");
 
 const deportesEquipo = ["Baloncesto", "Fútbol", "Padel"];
+
 const deportesIndividuales = ["Golf", "Tenis", "Badminton"];
+
 const deportesMentales = ["Ajedrez"]
 
 const concat = (a, b) => [...a, ...b];

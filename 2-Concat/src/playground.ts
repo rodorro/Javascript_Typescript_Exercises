@@ -10,8 +10,10 @@ const concat = (a, b) => [...a, ...b];
 
 const multipleConcat = (a, ...b) => [...a, ...b];
 
-console.log(`Los deportes individuales y de equipo son:
-    ${concat(deportesEquipo, deportesIndividuales)}`);
+console.log(`Los deportes individuales son: ${deportesIndividuales}`);
 
-console.log(`Los deportes individuales y de equipo con concatenación de arrays múltiples son:
-    ${multipleConcat(deportesEquipo, deportesIndividuales, deportesMentales)}`);
+console.log(`Los deportes de equipo son: ${deportesEquipo}`);
+
+console.log(`Los deportes individuales y de equipo son: ${concat(deportesEquipo, deportesIndividuales)}`);
+
+console.log(`Los deportes individuales y de equipo con concatenación de arrays múltiples son: ${multipleConcat(deportesEquipo, deportesIndividuales, deportesMentales)}`);

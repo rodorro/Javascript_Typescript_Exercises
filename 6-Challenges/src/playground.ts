@@ -1,2 +1,3 @@
-console.log("Challenge Exercises");
+console.log("Challenge Exercises:");
+console.log("--------------------")
 

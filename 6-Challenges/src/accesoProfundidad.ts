@@ -1,20 +1,23 @@
-console.log("Acceso en profundidad");
+console.log("Acceso en profundidad, GET");
 
-interface IObject extends Object {
-    a: number,
-    b: {
-        c: number,
-        d: {
-            e: number,
-            f: {
-                g: string
-            }
-        }
-    }
+const deepGet = (obj, ...prop: string[]) => 
+    prop.reduce((obj, key) =>(obj && obj[key] !== 'undefined') ? obj[key] : undefined, obj);
+
+const deepSet = (value, obj, ...prop: string[]) => {
+    prop.length===0
+    ?
+    obj
+    :
+    setValue(value, obj, ...prop);
 }
 
-const deepGet = (obj: IObject, ...prop: string[]) => 
-    prop.reduce((obj, key) =>(obj && obj[key] !== 'undefined') ? obj[key] : undefined, obj);
+const setValue = (value, obj, ...prop: string[]) => {
+    const [head, ...rest] = prop;
+    obj[head] = {};
+    !rest.length
+        ? obj[head] = value
+        : deepSet(value, obj[head], ...rest);
+}
 
 const myObject = {
     a: 1,
@@ -35,5 +38,18 @@ console.log(deepGet(myObject, "b")); // { c: null, d: {....}}
 console.log(deepGet(myObject, "b", "c")); // null
 console.log(deepGet(myObject, "b", "d", "f", "g")); // bingo
 console.log(deepGet(myObject)); // {a: 1, b: {...}}
+
+console.log("Acceso en profundidad, SET");
+
+const myObject2 = {};
+
+deepSet(1, myObject2, "a", "b");
+console.log(JSON.stringify(myObject2)); // {a: { b: 1}}
+deepSet(2, myObject2, "a", "c");
+console.log(JSON.stringify(myObject2)); // {a: { b: 1, c: 2}}
+deepSet(3, myObject2, "a");
+console.log(JSON.stringify(myObject2)); // {a: 3}
+deepSet(4, myObject2);
+console.log(JSON.stringify(myObject2)); // Do nothing // {a: 3}
 
 console.log("***********************************************************");

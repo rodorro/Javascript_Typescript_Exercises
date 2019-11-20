@@ -1,9 +1,9 @@
 console.log("Acceso en profundidad, GET");
 
-const deepGet = (obj, ...prop: string[]) => 
+const deepGet = (obj: Object, ...prop: string[]) => 
     prop.reduce((obj, key) =>(obj && obj[key] !== 'undefined') ? obj[key] : undefined, obj);
 
-const deepSet = (value, obj, ...prop: string[]) => {
+const deepSet = (value: number | string, obj: Object, ...prop: string[]) => {
     prop.length===0
     ?
     obj
@@ -11,9 +11,11 @@ const deepSet = (value, obj, ...prop: string[]) => {
     setValue(value, obj, ...prop);
 }
 
-const setValue = (value, obj, ...prop: string[]) => {
+const setValue = (value: number | string, obj: Object, ...prop: string[]) => {
     const [head, ...rest] = prop;
-    obj[head] = {};
+    if(!obj[head]){
+        obj[head] = {};  
+    }
     !rest.length
         ? obj[head] = value
         : deepSet(value, obj[head], ...rest);

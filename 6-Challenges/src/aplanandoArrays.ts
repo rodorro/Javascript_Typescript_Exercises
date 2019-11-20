@@ -10,5 +10,3 @@ const flattenDeep = (array: NestedArray<number>) => array.reduce((acc : NestedAr
 console.log(flattenDeep(sample));
 
 console.log("***********************************************************");
-
-

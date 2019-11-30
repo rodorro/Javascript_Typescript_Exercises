@@ -1,4 +1,4 @@
-console.log("Estructura de árbol tipada");
+console.log("Challengue 3: Estructura de árbol tipada");
 
 interface TreeNode2<T> {
   value: T;

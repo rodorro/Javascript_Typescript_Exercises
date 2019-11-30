@@ -1,4 +1,4 @@
-console.log("Acceso en profundidad, GET");
+console.log("Challengue 2: Acceso en profundidad, GET");
 
 const deepGet = (obj: Object, ...prop: string[]) => 
     prop.reduce((obj, key) =>(obj && obj[key] !== 'undefined') ? obj[key] : undefined, obj);
@@ -41,7 +41,7 @@ console.log(deepGet(myObject, "b", "c")); // null
 console.log(deepGet(myObject, "b", "d", "f", "g")); // bingo
 console.log(deepGet(myObject)); // {a: 1, b: {...}}
 
-console.log("Acceso en profundidad, SET");
+console.log("Challengue 2: Acceso en profundidad, SET");
 
 const myObject2 = {};
 

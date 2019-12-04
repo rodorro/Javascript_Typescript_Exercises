@@ -6,7 +6,7 @@ interface TreeChildren<T> extends Array<T | TreeNode<T>> {
 }
 type TreeNode<T> = T | TreeChildren<T>;
 
-const flattenDeep2 = (input: Array<TreeNode<Number>>) => {
+const flattenDeep = (input: Array<TreeNode<Number>>) => {
   const resultado = [];
   const stack = [...input];
   while (stack.length) {
@@ -23,6 +23,6 @@ const flattenDeep2 = (input: Array<TreeNode<Number>>) => {
   return resultado.reverse();
 };
 
-console.log(flattenDeep2(sample));
+console.log(flattenDeep(sample));
 
 console.log("***********************************************************");

@@ -22,12 +22,15 @@ let count = 0; // Comprobacion de nº de ejecuciones
 const repeatText = (repetitions: number, text: string): string => (
   count++, `${text} `.repeat(repetitions).trim()
 );
+
 const memoizeWithArgs = fn => {
   let cache = {};
-  return (...args) =>
+  return (...args: Array<string | boolean | number>) =>
     (cache[JSON.stringify(args)] = cache[JSON.stringify(args)] || fn(...args));
 };
+
 const memoizedGreet = memoizeWithArgs(repeatText);
+
 console.log(memoizedGreet(1, "pam")); // pam
 console.log(memoizedGreet(3, "chun")); // chun chun chun
 console.log(memoizedGreet(1, "pam")); // pam

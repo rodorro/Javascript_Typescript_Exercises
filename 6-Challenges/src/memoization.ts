@@ -18,6 +18,8 @@ console.log(memoized()); // 3.1415
 
 console.log("***********************************************************");
 
+console.log("Challengue 5: Memoization with args");
+
 let count = 0; // Comprobacion de nº de ejecuciones
 const repeatText = (repetitions: number, text: string): string => (
   count++, `${text} `.repeat(repetitions).trim()
@@ -36,3 +38,5 @@ console.log(memoizedGreet(3, "chun")); // chun chun chun
 console.log(memoizedGreet(1, "pam")); // pam
 console.log(memoizedGreet(3, "chun")); // chun chun chun
 console.log(count); // 2
+
+console.log("***********************************************************");

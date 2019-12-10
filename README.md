@@ -108,11 +108,15 @@ Console will show all the exercises logs like this:
 
 Challenge Exercises:
 --------------------
+
 Challengue 1: Aplanando Arrays
+
     (9) [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 ***********************************************************
 
 Challengue 2: Acceso en profundidad, GET undefined
+
     1
     {c: null, d: {…}}
     null
@@ -123,29 +127,39 @@ Challengue 2: Acceso en profundidad, GET undefined
     {"a":{"b":1,"c":2}}
     {"a":3}
     {"a":3}
+
 ***********************************************************
 
 Challengue 3: Estructura de árbol tipada 
+
     interface TreeNode < T > {
         value: T;
         children?: Array<TreeNode<T>>;
     }
+
 ***********************************************************
+
 Challengue 5: Memoization
+
     Una única llamada
     3.1415
     3.1415
     3.1415
+
 ***********************************************************
 
 Challengue 5: Memoization with args
+
     pam
     chun chun chun
     pam
     chun chun chun
     2
- ***********************************************************
+
+***********************************************************
+
 Challengue 4: Trazas por consola
+
     third
     second
     first

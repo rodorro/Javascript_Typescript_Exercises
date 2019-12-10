@@ -8,7 +8,7 @@
 
 "npm install" to install packages
 
-"npm start" to start playgorund on Chrome
+"npm start" to star playground on Chrome
 
 Console will show the exercise logs like this:
 
@@ -25,7 +25,7 @@ Console will show the exercise logs like this:
 
 "npm install" to install packages
 
-"npm start" to start playgorund on Chrome
+"npm start" to star playground on Chrome
 
 Console will show the exercise logs like this:
 
@@ -41,7 +41,7 @@ Console will show the exercise logs like this:
 
 "npm install" to install packages
 
-"npm start" to start playgorund on Chrome
+"npm start" to star playground on Chrome
 
 Console will show the exercise logs like this:
 
@@ -63,7 +63,7 @@ Console will show the exercise logs like this:
 
 "npm install" to install packages
 
-"npm start" to start playgorund on Chrome
+"npm start" to star playground on Chrome
 
 Console will show the exercise logs like this:
 
@@ -79,7 +79,7 @@ Console will show the exercise logs like this:
 
 "npm install" to install packages
 
-"npm start" to start playgorund on Chrome
+"npm start" to star playground on Chrome
 
 Console will show the exercise logs like this:
 
@@ -102,7 +102,7 @@ Console will show the exercise logs like this:
 
 "npm install" to install packages
 
-"npm start" to start playgorund on Chrome
+"npm start" to star playground on Chrome
 
 Console will show all the exercises logs like this:
 
